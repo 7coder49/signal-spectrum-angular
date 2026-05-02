@@ -1,0 +1,22 @@
+<div class="dashboard-grid">
+  <!-- Top Row: Metrics -->
+  <div class="grid-item metrics-row">
+    <app-metric-cards></app-metric-cards>
+  </div>
+
+  <!-- Middle Row: Waterfall & AI Insights -->
+  <div class="grid-item main-row">
+    <div class="waterfall-container">
+      <div class="panel-header">
+        <h3 class="cyber-title">Live Spectrum Waterfall</h3>
+        <app-playback-controls></app-playback-controls>
+      </div>
+      <app-waterfall-viewer></app-waterfall-viewer>
+    </div>
+    
+    <div class="sidebar-panels">
+      <app-ai-insights></app-ai-insights>
+      <app-occupancy-charts></app-occupancy-charts>
+    </div>
+  </div>
+</div>

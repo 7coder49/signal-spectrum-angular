@@ -1,0 +1,31 @@
+.insight-panel {
+  padding: 1rem;
+  border-left: 2px solid var(--accent-green);
+}
+
+.panel-header-sub h3 {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  color: var(--accent-green);
+}
+
+.insight-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.insight-item {
+  font-size: 0.8rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+  color: var(--text-primary);
+  display: flex;
+  gap: 10px;
+}
+
+.bullet {
+  color: var(--accent-green);
+  font-size: 0.6rem;
+  margin-top: 3px;
+}

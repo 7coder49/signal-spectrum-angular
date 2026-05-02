@@ -1,0 +1,63 @@
+.explorer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+}
+
+.cyber-input {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+}
+
+.table-container {
+  padding: 0;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.cyber-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.cyber-table th {
+  text-align: left;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--accent-cyan);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cyber-table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cyber-table tr:hover {
+  background: rgba(0, 242, 255, 0.02);
+}
+
+.freq-cell {
+  color: var(--accent-cyan);
+  font-weight: bold;
+}
+
+.anomaly-badge {
+  background: rgba(255, 62, 62, 0.2);
+  color: var(--accent-red);
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-size: 0.7rem;
+}

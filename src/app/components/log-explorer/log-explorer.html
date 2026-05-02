@@ -1,0 +1,43 @@
+<div class="explorer-container">
+  <div class="panel-header">
+    <h2 class="cyber-title">Digital Signal Log Explorer</h2>
+    <div class="filters">
+      <input type="text" placeholder="Search Frequency..." class="cyber-input">
+      <button class="cyber-button">EXPORT CSV</button>
+    </div>
+  </div>
+
+  <div class="table-container cyber-card">
+    <table class="cyber-table">
+      <thead>
+        <tr>
+          <th>Timestamp (UTC)</th>
+          <th>Frequency (MHz)</th>
+          <th>Strength (dBm)</th>
+          <th>Bandwidth (kHz)</th>
+          <th>Modulation</th>
+          <th>Source</th>
+          <th>Anomaly</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let log of logs">
+          <td>{{ log.timestamp | date:'HH:mm:ss.SSS' }}</td>
+          <td class="freq-cell">{{ log.frequency.toFixed(4) }}</td>
+          <td [style.color]="log.signal_strength > -60 ? 'var(--accent-red)' : 'var(--text-primary)'">
+            {{ log.signal_strength }}
+          </td>
+          <td>{{ log.bandwidth }}</td>
+          <td>{{ log.modulation_type }}</td>
+          <td>{{ log.source_station }}</td>
+          <td>
+            <span class="anomaly-badge" *ngIf="log.anomaly_confidence > 0.5" 
+                  [style.opacity]="log.anomaly_confidence">
+              ⚠️ {{ (log.anomaly_confidence * 100).toFixed(0) }}%
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

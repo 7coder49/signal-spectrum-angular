@@ -1,0 +1,49 @@
+.dashboard-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.metrics-row {
+  width: 100%;
+}
+
+.main-row {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+  height: 600px;
+}
+
+.waterfall-container {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panel-header h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--accent-cyan);
+}
+
+.sidebar-panels {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+app-waterfall-viewer {
+  flex-grow: 1;
+  position: relative;
+}

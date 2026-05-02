@@ -1,0 +1,19 @@
+<div class="anomaly-container">
+  <div class="panel-header">
+    <h2 class="cyber-title">RF Anomaly Alert Intelligence</h2>
+  </div>
+
+  <div class="anomaly-grid">
+    <div *ngFor="let alert of anomalies" class="cyber-card anomaly-card" [ngClass]="alert.severity.toLowerCase()">
+      <div class="alert-header">
+        <span class="severity-tag">{{ alert.severity }}</span>
+        <span class="timestamp">{{ alert.timestamp | date:'HH:mm:ss' }}</span>
+      </div>
+      <div class="alert-freq">{{ alert.frequency }} MHz</div>
+      <p class="alert-desc">{{ alert.description }}</p>
+      <div class="alert-footer">
+        Confidence: {{ (alert.confidence * 100).toFixed(1) }}%
+      </div>
+    </div>
+  </div>
+</div>

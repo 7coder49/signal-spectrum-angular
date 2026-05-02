@@ -1,0 +1,41 @@
+<div class="app-container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">
+      <h2 class="cyber-title">SSI<span>OBS</span></h2>
+      <p class="tagline">Signal Intelligence</p>
+    </div>
+    <nav>
+      <a routerLink="/dashboard" routerLinkActive="active" class="nav-item">
+        <span class="icon">📊</span> Dashboard
+      </a>
+      <a routerLink="/logs" routerLinkActive="active" class="nav-item">
+        <span class="icon">📜</span> Signal Logs
+      </a>
+      <a routerLink="/anomalies" routerLinkActive="active" class="nav-item">
+        <span class="icon">⚠️</span> Anomalies
+      </a>
+    </nav>
+    <div class="status-footer">
+      <div class="status-indicator">
+        <span class="pulse green"></span> SYSTEM ONLINE
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="top-bar">
+      <div class="header-info">
+        <h1>SIGNAL SPECTRUM INTELLIGENCE OBSERVATORY</h1>
+      </div>
+      <div class="system-time">
+        {{ (now | date:'yyyy-MM-dd HH:mm:ss') + ' UTC' }}
+      </div>
+    </header>
+
+    <div class="content-scroll">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>

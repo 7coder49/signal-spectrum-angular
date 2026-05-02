@@ -1,0 +1,27 @@
+<div class="metrics-grid">
+  <div class="cyber-card metric-card">
+    <div class="metric-label">Active Signals</div>
+    <div class="metric-value">{{ stats?.signal_count || 0 }}</div>
+    <div class="metric-trend status-active">↑ Real-time</div>
+  </div>
+
+  <div class="cyber-card metric-card">
+    <div class="metric-label">Avg Occupancy</div>
+    <div class="metric-value">{{ (stats?.average_occupancy || 0) * 100 }}%</div>
+    <div class="metric-trend" [ngClass]="stats?.status === 'CONGESTED' ? 'status-critical' : 'status-active'">
+      {{ stats?.status }}
+    </div>
+  </div>
+
+  <div class="cyber-card metric-card">
+    <div class="metric-label">Peak Frequency</div>
+    <div class="metric-value">{{ stats?.peak_frequency || 0 }} <span class="unit">MHz</span></div>
+    <div class="metric-trend status-warning">Max Intensity</div>
+  </div>
+
+  <div class="cyber-card metric-card">
+    <div class="metric-label">System Health</div>
+    <div class="metric-value">NOMINAL</div>
+    <div class="metric-trend status-active">100% Integrity</div>
+  </div>
+</div>
